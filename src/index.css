@@ -97,7 +97,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 label {
@@ -134,6 +134,12 @@ a.button {
   border-radius: 1vmin;
   outline: none;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--accent);
+  border: solid var(--accent);
 }
 
 button.btn-sm {

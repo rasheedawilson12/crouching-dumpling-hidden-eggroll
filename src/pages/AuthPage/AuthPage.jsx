@@ -2,7 +2,7 @@ import React from "react";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import { useState } from "react";
-import Logo from "../../components/Logo/Logo"
+import Logo from "../../components/Logo/Logo";
 import style from "./AuthPage.module.css";
 
 function AuthPage({ setUser }) {
