@@ -7,18 +7,23 @@
   padding: 2vmin;
   color: var(--text-light);
   background-color: var(--primary);
-  border: .1vmin solid var(--accent);
+  border: 0.1vmin solid var(--accent);
   border-radius: 1vmin;
   font-size: 4vmin;
 }
 
-.MenuListItem .emoji {
-  height: 8vw;
-  width: 8vw;
+.MenuListItem .image {
+  height: 10vw;
+  width: 10vw;
   font-size: 4vw;
   background-color: var(--secondary);
-  border: .1vmin solid var(--trim);
+  border: 0.3vmin solid var(--accent);
   border-radius: 1vmin;
+}
+
+.MenuListItem .thumbnail {
+  height: 150px;
+  width: 150px;
 }
 
 .MenuListItem .buy {
