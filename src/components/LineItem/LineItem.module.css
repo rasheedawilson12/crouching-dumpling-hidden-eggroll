@@ -1,32 +1,38 @@
 .LineItem {
-width: 100%;
-display: grid;
-grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;
-padding: 1vmin 0;
-color: var(--text-light);
-background-color: var(--primary);
-border-top: .1vmin solid var(--accent);
-font-size: 1.5vw;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;
+  padding: 1vmin 0;
+  color: var(--text-light);
+  background-color: var(--primary);
+  border-top: 0.1vmin solid var(--accent);
+  font-size: 1.5vw;
 }
 
 .LineItem:last-child {
-border-bottom: .1vmin solid var(--accent);
+  border-bottom: 0.1vmin solid var(--accent);
 }
 
 .LineItem .qty {
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 1.3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vw;
 }
 
 .LineItem .extPrice {
-display: flex;
-justify-content: flex-end;
-align-items: center;
-font-size: 1.3vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.3vw;
 }
 
 .LineItem button {
-margin: 0;
+  margin: 0;
+}
+
+.LineItem img {
+  width: 100px;
+  height: 80px;
+  margin: 0 auto;
 }
