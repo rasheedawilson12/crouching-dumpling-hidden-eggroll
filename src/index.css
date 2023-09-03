@@ -3,13 +3,11 @@
 }
 
 :root {
-  --white: #ffffff;
-  --tan-1: #fbf9f6;
-  --tan-2: #e7e2dd;
-  --tan-3: #e2d9d1;
-  --tan-4: #d3c1ae;
-  --orange: #f67f00;
-  --text-light: #968c84;
+  --primary: #a73121;
+  --secondary: #F0DE36;
+  --accent: #000000;
+  --trim: #F2E8C6;
+  --text-light: #fff;
   --text-dark: #615954;
 }
 
@@ -26,7 +24,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--trim);
   padding: 2vmin;
   height: 100vh;
 }
@@ -85,13 +83,13 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: 0.1vmin solid var(--tan-3);
+  background-color: var(--secondary);
+  border: 0.1vmin solid var(--trim);
   border-radius: 1vmin;
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--accent);
   text-align: center;
 }
 
@@ -111,7 +109,7 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: 0.1vmin solid var(--tan-3);
+  border: 0.1vmin solid var(--trim);
   border-radius: 0.5vmin;
   color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
@@ -119,21 +117,21 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--accent);
 }
 
 button,
 a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
-  background-color: var(--orange);
+  color: var(--primary);
+  background-color: var(--accent);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: 0.1vmin solid var(--tan-2);
-  border-radius: 0.5vmin;
+  border: 0.1vmin solid var(--secondary);
+  border-radius: 1vmin;
   outline: none;
   cursor: pointer;
 }
@@ -151,7 +149,7 @@ button.btn-xs {
 button:disabled,
 form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--trim);
 }
 
 button[type="submit"] {

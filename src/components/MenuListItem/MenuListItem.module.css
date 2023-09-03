@@ -6,8 +6,8 @@
   margin-bottom: 3vmin;
   padding: 2vmin;
   color: var(--text-light);
-  background-color: var(--white);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--primary);
+  border: .1vmin solid var(--accent);
   border-radius: 1vmin;
   font-size: 4vmin;
 }
@@ -16,8 +16,8 @@
   height: 8vw;
   width: 8vw;
   font-size: 4vw;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--secondary);
+  border: .1vmin solid var(--trim);
   border-radius: 1vmin;
 }
 
