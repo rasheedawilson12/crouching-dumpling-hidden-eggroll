@@ -1,8 +1,8 @@
 require("dotenv").config();
-require("./database");
+require("./databse");
 
-const Category = require("../../models/Category");
-const Item = require("../../models/Item");
+const Category = require("../models/Category");
+const Item = require("../models/Item");
 
 (async function () {
   await Category.deleteMany({});
