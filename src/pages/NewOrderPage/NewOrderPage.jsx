@@ -33,9 +33,6 @@ export default function NewOrderPage({ user, setUser }) {
     }
     getCart();
   }, []);
-  // Providing an empty 'dependency array'
-  // results in the effect running after
-  // the FIRST render only
 
   /*-- Event Handlers --*/
   async function handleAddToOrder(itemId) {
