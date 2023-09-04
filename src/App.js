@@ -1,6 +1,6 @@
 import styles from "./App.module.css";
 import { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useParams } from "react-router-dom";
 import { getUser } from "./utilities/users-service";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import NewOrderPage from "./pages/NewOrderPage/NewOrderPage";
@@ -12,6 +12,7 @@ import Edit from "./pages/Edit/Edit";
 function App() {
   // array destructing
   const [user, setUser] = useState(getUser());
+  const id = useParams();
 
   return (
     <main className={styles.App}>
@@ -27,8 +28,8 @@ function App() {
               path="/orders"
               element={<OrderHistoryPage user={user} setUser={setUser} />}
             />
-            <Route path="/new" element={<New />} />
-            <Route path="/edit" element={<Edit item={}/>} />
+            <Route path="/new" element={<New />} id={id} />
+            <Route path="/edit/:id" element={<Edit />} />
             {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>

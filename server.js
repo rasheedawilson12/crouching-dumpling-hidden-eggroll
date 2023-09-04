@@ -5,7 +5,6 @@ const path = require("path");
 const favicon = require("serve-favicon");
 const logger = require("morgan");
 const methodOverride = require("method-override");
-const Item = require("./models/Item");
 const app = express();
 
 app.set("view engine", "jsx");

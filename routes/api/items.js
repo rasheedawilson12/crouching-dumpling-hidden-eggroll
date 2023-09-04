@@ -9,6 +9,6 @@ router.get("/:id", itemsCtrl.show);
 
 router.get("/new", itemsCtrl.newItem);
 
-router.get("/:id/edit", itemsCtrl.edit);
+router.get("/edit/:id", itemsCtrl.edit);
 
 module.exports = router;

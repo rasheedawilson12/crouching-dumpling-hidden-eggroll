@@ -1,14 +1,14 @@
 import React from "react";
 
-function Edit({ menuItem }) {
+function Edit({ id }) {
   return (
     <div>
-      <form action={`/${menuItem._id}?_method=PUT`} method="POST">
-        Image: <input type="text" name="color" defaultValue={menuItem.img} />
+      <form action={`edit/${id._id}?_method=PUT`} method="POST">
+        Image: <input type="text" name="color" defaultValue={id.img} />
         <br />
-        Name: <input type="text" name="name" defaultValue={menuItem.name} />
+        Name: <input type="text" name="name" defaultValue={id.name} />
         <br />
-        Price: <input type="text" name="name" defaultValue={menuItem.price} />
+        Price: <input type="text" name="name" defaultValue={id.price} />
         <input type="submit" value="Submit Changes" />
       </form>
     </div>
