@@ -4,10 +4,9 @@ function New() {
   return (
     <div>
       <h1>New Item Page</h1>
-      {/* NOTE: action will be the route, method will be the HTTP verb */}
-      <form action="/item/new" method="POST">
+      <form action="/new" method="POST">
         Img: <input type="text" name="img" />
-        <br/>
+        <br />
         Name: <input type="text" name="name" />
         <br />
         Price: <input type="text" name="price" />

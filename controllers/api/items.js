@@ -38,7 +38,8 @@ async function newItem(req, res) {
 async function edit(req, res) {
   try {
     const foundItem = await Item.findById(req.params.id);
-    res.render("Edit", { item: foundItem });
+    res.render("Edit", {item: foundItem})
+    // res.status(200).json(item);
   } catch (e) {
     res.status(400).json({ msg: e.message });
   }

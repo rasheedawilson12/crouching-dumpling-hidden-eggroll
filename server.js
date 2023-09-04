@@ -8,6 +8,9 @@ const methodOverride = require("method-override");
 const Item = require("./models/Item");
 const app = express();
 
+app.set("view engine", "jsx");
+app.engine("jsx", require("express-react-views").createEngine());
+
 app.use(logger("dev"));
 app.use(express.json());
 
@@ -25,21 +28,6 @@ app.use("/api/items", ensureLoggedIn, require("./routes/api/items"));
 app.use("/api/orders", ensureLoggedIn, require("./routes/api/orders"));
 app.use(methodOverride("_method"));
 
-app.delete("/:id", async (req, res) => {
-  await Item.findByIdAndRemove(req.params.id);
-  res.redirect("/orders/new");
-});
-
-app.put("/:id", async (req, res) => {
-  const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body);
-  res.redirect(`/item/${req.params.id}`);
-});
-
-// ---------------------------------------------------------{EDIT}
-app.get("/:id/edit", async (req, res) => {
-  const foundItem = await Item.findById(req.params.id);
-  res.render("Edit", { item: foundItem });
-});
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests

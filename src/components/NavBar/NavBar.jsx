@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
-import styles from "./NavBar.module.css"
+import styles from "./NavBar.module.css";
 
 function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -18,6 +18,8 @@ function NavBar({ user, setUser }) {
       <Link to="" onClick={handleLogOut}>
         Log Out
       </Link>
+      <br />
+      <a href="/new">Create a New Item</a>
     </nav>
   );
 }

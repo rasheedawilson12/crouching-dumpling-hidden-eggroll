@@ -6,11 +6,12 @@ import AuthPage from "./pages/AuthPage/AuthPage";
 import NewOrderPage from "./pages/NewOrderPage/NewOrderPage";
 import OrderHistoryPage from "./pages/OrderHistoryPage/OrderHistoryPage";
 import NavBar from "./components/NavBar/NavBar";
+import New from "./pages/New/New";
+import Edit from "./pages/Edit/Edit";
 
 function App() {
   // array destructing
   const [user, setUser] = useState(getUser());
-
 
   return (
     <main className={styles.App}>
@@ -26,6 +27,8 @@ function App() {
               path="/orders"
               element={<OrderHistoryPage user={user} setUser={setUser} />}
             />
+            <Route path="/new" element={<New />} />
+            <Route path="/edit" element={<Edit item={}/>} />
             {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>
