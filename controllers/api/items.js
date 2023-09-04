@@ -3,6 +3,8 @@ const Item = require("../../models/Item");
 module.exports = {
   index,
   show,
+  newItem,
+  edit,
 };
 
 async function index(req, res) {
@@ -20,6 +22,23 @@ async function show(req, res) {
   try {
     const item = await Item.findById(req.params.id);
     res.status(200).json(item);
+  } catch (e) {
+    res.status(400).json({ msg: e.message });
+  }
+}
+
+async function newItem(req, res) {
+  try {
+    res.render("New");
+  } catch (e) {
+    res.status(400).json({ msg: e.message });
+  }
+}
+
+async function edit(req, res) {
+  try {
+    const foundItem = await Item.findById(req.params.id);
+    res.render("Edit", { item: foundItem });
   } catch (e) {
     res.status(400).json({ msg: e.message });
   }

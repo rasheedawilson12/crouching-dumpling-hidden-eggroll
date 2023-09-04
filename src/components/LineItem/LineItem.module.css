@@ -10,7 +10,7 @@
 }
 
 .LineItem:last-child {
-  border-bottom: 0.1vmin solid var(--accent);
+  border-bottom: 0.1vmin solid var(--secondary);
 }
 
 .LineItem .qty {
@@ -32,7 +32,11 @@
 }
 
 .LineItem img {
-  width: 100px;
+  width: 80px;
   height: 80px;
   margin: 0 auto;
+  border: solid var(--secondary);
+  margin: 0 auto;
+  margin-left: 20px;
+  text-align: center;
 }

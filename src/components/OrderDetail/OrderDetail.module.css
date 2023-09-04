@@ -1,6 +1,6 @@
 .OrderDetail {
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   padding: 3vmin;
   font-size: 2vmin;
@@ -8,7 +8,9 @@
 }
 
 .OrderDetail .sectionHeading {
-  width: 100%
+  width: 100%;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .OrderDetail .lineItemContainer {
@@ -24,7 +26,7 @@
   grid-template-columns: 18.35vw 5.75vw 5.25vw;
   padding: 1vmin 0;
   color: var(--text-light);
-  border-top: .1vmin solid var(--trim);
+  border-top: 0.1vmin solid var(--trim);
 }
 
 .OrderDetail .total span {

@@ -10,6 +10,8 @@ import NavBar from "./components/NavBar/NavBar";
 function App() {
   // array destructing
   const [user, setUser] = useState(getUser());
+
+
   return (
     <main className={styles.App}>
       {user ? (

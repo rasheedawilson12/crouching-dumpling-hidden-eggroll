@@ -3,6 +3,6 @@ background-color: var(--secondary);
 border: .1vmin solid var(--trim);
 border-radius: 2vmin;
 margin: 3vmin 0;
-padding: 3vmin;
+padding: 2vmin;
 overflow-y: scroll;
 }
